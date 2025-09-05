@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>UI Елементи</title>
+</head>
+<body>
+    <h1>HTML UI elements</h1>
+    <p>Виконав студент ІП-32</p>
+    <p>Карпець Даніїл</p>
+
+    <h2>Radiobutton</h2>
+    <p>Radiobutton - це тип елемента UI, який дає користувачу вибрати ЛИШЕ ОДИН з наведених варіантів</p>
+    
+    <p>Оберіть вашу мову програмування:</p>
+      <input type="radio">Python<br>
+      <input type="radio">Java<br>
+      <input type="radio">ASSembler<br>
+
+    <h2>Checkbox</h2>
+    <p>Checkbox - це тип елемента UI, який дає користувачеві вибрати один, декілька або всі наведені варіанти</p>
+    <p>Оберіть напрямок ІТ, у якому ви працюєте:</p>
+      <input type="checkbox">Backend розробка<br>
+      <input type="checkbox">Frontend розробка<br>
+      <input type="checkbox">Декстопна розробка<br>
+      <input type="checkbox">Девопс<br>
+
+    <h2>Text input</h2>
+    <p>Text input - це елемент UI, який є полем для введення інформації користувачем.</p>
+    <p>Введіть прізвище та ім'я</p>
+      <input type="text" placeholder="Карпець Даніїл">
+
+    <h2>Tabs</h2>
+    <p>Tabs(Вкладки) - це елементи UI, які дозволяють користувачеві переключатися між різними розділами інтерфейсу.</p>
+    
+    <div>
+        <button onclick="openTab('tab1')">index.html</button>
+        <button onclick="openTab('tab2')">styles.css</button>
+        <button onclick="openTab('tab3')">script.js</button>
+    </div>
+    <div id="tab1" class="tab-content" style="display:block;">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </code></pre>
+  </div>
+    <div id="tab2" class="tab-content" style="display:none;">
+      <pre><code>body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+}
+  
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+      </code></pre>
+    </div>
+    
+    <div id="tab3" class="tab-content" style="display:none;">
+        <pre><code>function hello() {
+    alert("Привіт!");
+  }
+        </code></pre>
+    </div>
+
+    <h2>Button</h2>
+    <p>Button(кнопка) - це елемент UI, який дає користувачеві можливість надсилати форми або виконувати інші функції</p>
+    <p>Кнопки можуть бути активними:</p>
+    <button>Активна кнопка</button>
+    <p>Або ж неактивними:</p>
+    <button disabled>Активна кнопка</button>
+
+    <h2>Text label</h2>
+    <p>Label - це елемент UI, який є міткою для елементів типу input. При натисканні на такий лейбл, прив'язаний інпут активується</p>
+    <label for="email">Електронна пошта:</label><br>
+    <input type="text" id="email" placeholder="user@example.com">
+
+    <h2>Link</h2>
+    <p>Link(Посилання) - посилання для переходу між сторінками сайту, інші сайти чи файли</p>
+    <p>Тут НЕ рікрол</p>
+    <a href="https://youtu.be/dQw4w9WgXcQ?feature=shared">Посилання</a>
+
+    <h2>Tooltip</h2>
+    <p>Tooltip - це підказка, яка з’являється при наведенні на елемент та містить інформацію про нього чи інший текст</p>
+    <button title="Хелоу">Тут підказка</button>
+
+    <h2>Dropdown list</h2>
+    <p>Dropdown list(Спадний список) - це елемент UI, при натисканні на який відкрвається перелік елементів і з якого можна вибрати один варіант</p>
+    <p>Оберіть місце навчання</p>
+    <select>
+        <option>КПІ ім. Ігоря Сікорського</option>
+        <option>КНУ ім. Тараса Шевченка</option>
+        <option>Києво-Могилянська Академія</option>
+    </select>
+
+    <h2>Data grid</h2>
+    <p>Data Grid - це таблиця, яка відображає дані у табличному вигляді: у рядках і стовпцях</p>
+    <table border="1">
+        <tr>
+            <th>№</th>
+            <th>Факультет</th>
+            <th>Спеціальність</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>ФІОТ</td>
+            <td>121</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>ФТІ</td>
+            <td>113</td>
+        </tr>
+    </table>
+
+</body>
+<script>
+        function openTab(tabName) {
+            var tabs = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+</html>
